@@ -180,7 +180,7 @@ const placeOrderRazorpay = async (req, res) => {
             receipt: newOrder._id.toString(),
         };
 
-        razorInstance.orders.create(options, (error, order) => {
+         razorInstance.orders.create(options, (error, order) => {
             if (error) {
                 console.log(error);
                 return res.json({ success: false, message: error });
